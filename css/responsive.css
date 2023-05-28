@@ -1,0 +1,122 @@
+/* I pad view responsive css start */
+@media only screen and (max-width: 810px){
+    html {
+        font-size: 9px;
+    }
+
+    .container {
+        min-height: 74vh;
+    }
+
+    .container .nasheedItems {
+        width: 70%;
+    }
+
+    .bottomArea .bottomItem {
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 1rem 0;
+        min-height: 15vh;
+    }
+
+    .songInfo {
+        width: 100%;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        text-align: center;
+        padding-top: 1rem;
+    }
+
+    .bottomArea {
+        height: 20vh;
+        align-items: center;
+    }
+
+    .bottomArea #gif {
+        width: 40px;
+    }
+    
+    #masterSongName {
+        font-size: 1.3rem;
+    }
+    
+    .nasheedDuration {
+        display: block;
+        width: 100%;
+        text-align: start;
+    }
+
+    #seekBar::-moz-range-thumb {
+        height: 12px;
+        width: 12px;
+    }
+
+    #seekBar::-webkit-slider-thumb {
+        height: 12px;
+        width: 12px;
+    }
+}
+
+
+/* mobile view responsive css start */
+@media only screen and (max-width: 480px){
+    html {
+        font-size: 8px;
+    }
+
+    .ring {
+        width: 14rem;
+        height: 14rem;
+        line-height: 15rem;
+        font-size: 1.1rem;
+    }
+
+    nav ul li a {
+        font-size: 1.3rem;
+    }
+
+    .container .nasheedItems {
+        width: 90%;
+    }
+
+    .container .nasheedItems .coverPath img {
+        width: 26px;
+        height: 26px;
+    }
+
+    #seekBar {
+        height: 5px;
+    }
+
+    #seekBar::-moz-range-thumb {
+        height: 7px;
+        width: 7px;
+    }
+
+    #seekBar::-webkit-slider-thumb {
+        height: .7rem;
+        width: .7rem;
+        transform: translate(-4px);
+    }
+}
+
+
+@media only screen and (max-width: 320px) {
+    html {
+        font-size: 7px;
+    }
+    nav ul li a {
+        font-size: 1rem;
+    }
+
+    nav ul li .logo {
+        width: 15px;
+        padding-right: 5px;
+    }
+
+    .container .nasheedItems .coverPath img {
+        width: 25px;
+        height: 25px;
+    }
+}

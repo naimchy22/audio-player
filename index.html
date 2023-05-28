@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font font-awesome kit -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- css links -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <title>Quran - peace of mind</title>
+</head>
+<body>
+    <!-- loaing anim -->
+    <div id="loadParent"></div>
+    <nav>
+        <div class="content">
+            <ul>
+                <li><a href="#home"><img src="images/logo.png" alt="quran" class="logo"> <span class="logo-title">Holy <span style="color: #20bf6b">Quran</span></span></a></li>
+                <div class="links">
+                    <li><a href="#home">home</a></li>
+                    <li><a href="pages/about.html">about</a></li>
+                </div>
+            </ul>
+        </div>
+    </nav>
+    <main class="container" id="home">
+        <div class="content">
+            <div class="banner">
+                <ul class="nasheedItems">
+                    <li class="songList">
+                        <span class="coverPath"><img  alt="cover"></span> 
+                        <span class="nasheedName"></span>
+                        <span class="playIcon"><span class="timeStamp"></span><i id="0" class="far playNow icon fa-3x fa-play-circle"></i></span>
+                    </li>
+                    <li class="songList">
+                        <span class="coverPath"><img  alt="cover"></span> 
+                        <span class="nasheedName"></span>
+                        <span class="playIcon"><span class="timeStamp"></span><i id="1" class="far playNow icon fa-3x fa-play-circle"></i></span>
+                    </li>
+                    <li class="songList">
+                        <span class="coverPath"><img  alt="cover"></span> 
+                        <span class="nasheedName"></span>
+                        <span class="playIcon"><span class="timeStamp"></span><i id="2" class="far playNow icon fa-3x fa-play-circle"></i></span>
+                    </li>
+                    <li class="songList">
+                        <span class="coverPath"><img  alt="cover"></span> 
+                        <span class="nasheedName"></span>
+                        <span class="playIcon"><span class="timeStamp"></span><i id="3" class="far playNow icon fa-3x fa-play-circle"></i></span>
+                    </li>
+                    <li class="songList">
+                        <span class="coverPath"><img  alt="cover"></span> 
+                        <span class="nasheedName"></span>
+                        <span class="playIcon"><span class="timeStamp"></span><i id="4" class="far playNow icon fa-3x fa-play-circle"></i></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <div class="bottomArea">
+        <div class="content">
+            <div class="bottomItem">
+                <div id="seekBar">
+                    <div class="myRange"></div>
+                </div>
+                <div class="songInfo w-100">
+                    <img src="images/playing.gif" width="50px" alt="" id="gif"> <span id="masterSongName">Nasheed - Liyakun Yawmuka</span>
+                </div>
+                <div class="nasheedDuration">
+                    <span id="duration">2 : 37</span>
+                </div>
+                <div class="icons">
+                    <!-- fontawesome icons -->
+                    <i class="fas  fa-3x fa-step-backward" id="previous"></i>
+                    <i class="far  fa-3x fa-play-circle" id="masterPlay"></i>
+                    <i class="fas  fa-3x fa-step-forward" id="next"></i> 
+                </div> 
+                <div class="nasheed min_sec">
+                    <span id="total_time">0 : 00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
