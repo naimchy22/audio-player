@@ -86,18 +86,12 @@
     }
 
     #seekBar {
-        height: 5px;
+        height: 4px;
     }
 
-    #seekBar::-moz-range-thumb {
-        height: 7px;
-        width: 7px;
-    }
-
-    #seekBar::-webkit-slider-thumb {
-        height: .7rem;
-        width: .7rem;
-        transform: translate(-4px);
+    #seekBar .myRange::before {
+        width: 1rem;
+        height: 1rem;
     }
 }
 
@@ -118,5 +112,15 @@
     .container .nasheedItems .coverPath img {
         width: 25px;
         height: 25px;
+    }
+
+    #seekBar {
+        height: 3px;
+    }
+
+    #seekBar .myRange::before {
+        width: .9rem;
+        height: .9rem;
+        right: -.9rem;
     }
 }

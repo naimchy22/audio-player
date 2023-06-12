@@ -14,7 +14,7 @@ let playingGif = bottomArea.querySelector("#gif");
 let masterSongName = bottomArea.querySelector("#masterSongName");
 let seekBar = bottomArea.querySelector("#seekBar");
 let myRange = bottomArea.querySelector(".myRange");
-let duration = bottomArea.querySelector("#duration");
+let audioTotalduration = bottomArea.querySelector("#duration");
 let total_time = bottomArea.querySelector("#total_time");
 
 /*==============================*/
@@ -121,11 +121,6 @@ playNow.forEach((element) => {
     })
 })
 
-// seekBar.addEventListener("mousemove", () => {
-//    let rangValue = myRange.value;
-//    myRange.style.width = `${rangValue}%`;
-// })
-
 // myRange status
 audioElement.addEventListener("timeupdate", (e) => {
     const { currentTime,duration } = e.srcElement;
@@ -143,20 +138,19 @@ audioElement.addEventListener("timeupdate", (e) => {
     const curr_nasheed_sec = Math.floor(duration % 60);
 
     if(curr_nasheed_sec < 10) {
-        duration.innerText = `${curr_nasheed_min} : 0${curr_nasheed_sec}`;
-    }else if(audioElement.duration){
-        duration.innerText = `${curr_nasheed_min} : ${curr_nasheed_sec}`;
+        audioTotalduration.innerText = `${curr_nasheed_min} : 0${curr_nasheed_sec}`;
+    }else if(duration){
+        audioTotalduration.innerText = `${curr_nasheed_min} : ${curr_nasheed_sec}`;
     }
 
     const audioTimeMin = Math.floor(currentTime / 60);
     const audioTimeSec = Math.floor(currentTime % 60);
 
     if(audioTimeSec < 10){
-            total_time.innerText = `${audioTimeMin} : 0${audioTimeSec}`;
+        total_time.innerText = `${audioTimeMin} : 0${audioTimeSec}`;
     }else{
         total_time.innerText = `${audioTimeMin} : ${audioTimeSec}`;
     }
-
 })
 
 // Change audio current time
@@ -175,7 +169,7 @@ seekBar.addEventListener("click", audioTimeChange);
  * then work this function return a pause,play icon & audio 
  * || if audio is paused and thus work this.
  */
-const playAudio = () => {
+const playAudio = (index) => {
     if(audioElement.paused || audioElement.currentTime <= 0){
         audioElement.play()
         showStatus()
